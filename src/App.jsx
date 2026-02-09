@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-
 import { Routes, Route, Link } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -12,10 +11,8 @@ import CaseStudy from "./pages/CaseStudy";
 import ConcretCase from "./pages/ConcretCase";
 
 export default function App() {
-  // State pour le thème : "light" ou "dark"
   const [theme, setTheme] = useState("light");
 
-  // Fonction pour basculer le thème
   function toggleTheme() {
     setTheme(theme === "light" ? "dark" : "light");
   }
@@ -31,20 +28,33 @@ export default function App() {
           <li><Link to="/contact">Contact</Link></li>
         </ul>
 
-        {/* Bouton jour / nuit */}
+        {/* Bouton jour/nuit */}
         <button onClick={toggleTheme}>
           {theme === "light" ? "Mode nuit" : "Mode jour"}
         </button>
+
+        {/* Logo GitHub */}
+        <a
+          href="https://github.com/tonprofil"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt="GitHub logo"
+            className="github-logo"
+          />
+        </a>
       </nav>
 
       {/* ROUTES */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home theme={theme} />} />
+        <Route path="/about" element={<About theme={theme} />} />
+        <Route path="/contact" element={<Contact theme={theme} />} />
 
-        <Route path="/works" element={<Works />}>
-          <Route index element={<Exercices />} /> {/* affichage par défaut */}
+        <Route path="/works" element={<Works theme={theme} />}>
+          <Route index element={<Exercices />} />
           <Route path="exercices" element={<Exercices />} />
           <Route path="case-study" element={<CaseStudy />} />
           <Route path="concret-case" element={<ConcretCase />} />

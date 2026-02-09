@@ -257,3 +257,23 @@ header a img.github-logo {
   width: 30px;
   height: 30px;
 }
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px; /* espace entre les cartes */
+}
+
+.project {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+}
+
+.github-logo {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}

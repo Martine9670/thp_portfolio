@@ -3,25 +3,14 @@ export default function Home({ theme }) {
     <div className={`page ${theme}`}>
       {/* HEADER */}
       <header>
-        <h1>Portfolio de John Doe</h1>
+        <h1>Portfolio de Martine</h1>
         <div className="header-right">
-          <a
-            href="https://github.com/tonprofil" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://via.placeholder.com/30x30?text=GitHub"
-              alt="GitHub logo"
-              className="github-logo"
-            />
-          </a>
         </div>
       </header>
 
       {/* INTRO */}
       <section>
-        <h2>Bonjour, je m'appelle John Doe. Bienvenue sur mon portfolio !</h2>
+        <h2>Bonjour, je m'appelle Martine. Bienvenue sur mon portfolio !</h2>
         <p>
           Depuis quelques mois, j'apprends le développement web grâce à The Hacking Project.
           J'ai ainsi pu apprendre à utiliser Ruby, Rails, JavaScript et React.
