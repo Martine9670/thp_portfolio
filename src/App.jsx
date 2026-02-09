@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -10,27 +10,38 @@ import Exercices from "./pages/Exercices";
 import CaseStudy from "./pages/CaseStudy";
 import ConcretCase from "./pages/ConcretCase";
 
+import { LanguageContext } from "./context/LanguageContext";
+import { translations } from "./translations"; // <-- ton fichier de traductions
+
 export default function App() {
+  const { language, toggleLanguage } = useContext(LanguageContext);
   const [theme, setTheme] = useState("light");
 
   function toggleTheme() {
     setTheme(theme === "light" ? "dark" : "light");
   }
 
+  const t = translations[language]; // raccourci pour accéder aux textes
+
   return (
     <div className={`app ${theme}`}>
       {/* NAVIGATION */}
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/works">Works</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/">{t.home}</Link></li>
+          <li><Link to="/about">{t.about}</Link></li>
+          <li><Link to="/works">{t.works}</Link></li>
+          <li><Link to="/contact">{t.contact}</Link></li>
         </ul>
 
         {/* Bouton jour/nuit */}
         <button onClick={toggleTheme}>
-          {theme === "light" ? "Mode nuit" : "Mode jour"}
+          {theme === "light" ? t.toggleThemeLight : t.toggleThemeDark}
+        </button>
+
+        {/* Bouton langue */}
+        <button onClick={toggleLanguage}>
+          {language === "fr" ? "EN" : "FR"}
         </button>
 
         {/* Logo GitHub */}
@@ -49,15 +60,15 @@ export default function App() {
 
       {/* ROUTES */}
       <Routes>
-        <Route path="/" element={<Home theme={theme} />} />
-        <Route path="/about" element={<About theme={theme} />} />
-        <Route path="/contact" element={<Contact theme={theme} />} />
+        <Route path="/" element={<Home theme={theme} language={language} />} />
+        <Route path="/about" element={<About theme={theme} language={language} />} />
+        <Route path="/contact" element={<Contact theme={theme} language={language} />} />
 
-        <Route path="/works" element={<Works theme={theme} />}>
-          <Route index element={<Exercices />} />
-          <Route path="exercices" element={<Exercices />} />
-          <Route path="case-study" element={<CaseStudy />} />
-          <Route path="concret-case" element={<ConcretCase />} />
+        <Route path="/works" element={<Works theme={theme} language={language} />}>
+          <Route index element={<Exercices language={language} />} />
+          <Route path="exercices" element={<Exercices language={language} />} />
+          <Route path="case-study" element={<CaseStudy language={language} />} />
+          <Route path="concret-case" element={<ConcretCase language={language} />} />
         </Route>
       </Routes>
     </div>
