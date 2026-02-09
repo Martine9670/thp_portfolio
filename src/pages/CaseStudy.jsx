@@ -1,19 +1,13 @@
-import { useContext } from "react";
-import { LanguageContext } from "../context/LanguageContext";
+import useTranslation from "../hooks/useTranslation";
 
 export default function CaseStudy() {
-  const { language } = useContext(LanguageContext);
-
-  const projects = [
-    language === "fr" ? "Nike, le nouveau site web" : "Nike, the new website",
-    language === "fr" ? "Paypal, comment leurs données sont stockées" : "Paypal, how their data are stored"
-  ];
+  const { t } = useTranslation();
 
   return (
     <div>
-      <h2>{language === "fr" ? "Études de cas" : "Case Study"}</h2>
+      <h2>{t("works.caseStudy")}</h2>
       <div className="cards">
-        {projects.map((project, index) => (
+        {t("caseStudy").map((project, index) => (
           <div className="card case-study-card" key={index}>
             {project}
           </div>

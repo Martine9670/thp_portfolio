@@ -1,20 +1,13 @@
-import { useContext } from "react";
-import { LanguageContext } from "../context/LanguageContext";
+import useTranslation from "../hooks/useTranslation";
 
 export default function Exercices() {
-  const { language } = useContext(LanguageContext);
-
-  const projects = [
-    language === "fr" ? "Informations sur les jeux vidéo" : "Video Game informations",
-    language === "fr" ? "Le bloc-notes" : "The notepad",
-    language === "fr" ? "React Router" : "React Router"
-  ];
+  const { t } = useTranslation();
 
   return (
     <div>
-      <h2>{language === "fr" ? "Exercices" : "Exercises"}</h2>
+      <h2>{t("works.exercices")}</h2>
       <div className="cards">
-        {projects.map((project, index) => (
+        {t("exercices").map((project, index) => (
           <div className="card exercices-card" key={index}>
             {project}
           </div>

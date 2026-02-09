@@ -1,19 +1,13 @@
-import { useContext } from "react";
-import { LanguageContext } from "../context/LanguageContext";
+import useTranslation from "../hooks/useTranslation";
 
 export default function ConcretCase() {
-  const { language } = useContext(LanguageContext);
-
-  const projects = [
-    language === "fr" ? "Site web du club de bridge de mes grands-parents" : "My grandparent bridge club website",
-    language === "fr" ? "Boulangerie d’un ami" : "My friend bakery"
-  ];
+  const { t } = useTranslation();
 
   return (
     <div>
-      <h2>{language === "fr" ? "Cas concrets" : "Concret Case"}</h2>
+      <h2>{t("works.concretCase")}</h2>
       <div className="cards">
-        {projects.map((project, index) => (
+        {t("concretCase").map((project, index) => (
           <div className="card concret-case-card" key={index}>
             {project}
           </div>
