@@ -34,12 +34,12 @@ export default function App() {
 
         {/* Bouton jour/nuit */}
         <button onClick={toggleTheme}>
-          {theme === "light" ? t("theme.dark") : t("theme.light")}
+          {theme === "light" ? t("theme.light") : t("theme.dark")}
         </button>
 
         {/* Bouton langue dynamique */}
         <button onClick={toggleLanguage}>
-          {language === "fr" ? "EN" : "FR"} {/* tu peux aussi traduire ça avec t() si tu veux */}
+          {language === "fr" ? "EN" : "FR"}
         </button>
 
         {/* Logo GitHub */}
