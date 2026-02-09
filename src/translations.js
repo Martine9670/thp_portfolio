@@ -12,7 +12,7 @@ export const translations = {
       dark: "Mode jour"
     },
     works: {
-      title: "Bienvenue sur la page Works. Veuillez sélectionner une catégorie",
+      title: "Bienvenue ! Veuillez sélectionner une catégorie",
       exercices: "Exercices",
       caseStudy: "Études de cas",
       concretCase: "Cas concrets"
@@ -53,7 +53,7 @@ export const translations = {
       dark: "Light Mode"
     },
     works: {
-      title: "Welcome to the Works page. Please select a category",
+      title: "Welcome ! Please select a category",
       exercices: "Exercises",
       caseStudy: "Case Study",
       concretCase: "Concrete Case"
