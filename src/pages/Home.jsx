@@ -12,8 +12,8 @@ export default function Home({ theme }) {
       <section>
         <h2>Bonjour, je m'appelle Martine. Bienvenue sur mon portfolio !</h2>
         <p>
-          Depuis quelques mois, j'apprends le développement web grâce à The Hacking Project.
-          J'ai ainsi pu apprendre à utiliser Ruby, Rails, JavaScript et React.
+          Depuis quelques mois, j'apprends le développement web, back-end et front-end, avec The Hacking Project.
+          J'ai ainsi pu apprendre à utiliser Ruby on Rails, JavaScript et React.
         </p>
       </section>
 

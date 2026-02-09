@@ -1,15 +1,15 @@
 export default function About({ theme }) {
   return (
     <div className={`page ${theme}`}>
-      <h2>Bonjour, je m'appelle Martine. Bienvenue sur mon portfolio !</h2>
+      <h2>Bonjour et bienvenue sur mon portfolio !</h2>
       <p>
-        Depuis quelques mois, j'apprends le développement web grâce à The Hacking Project. 
-        J'ai ainsi pu apprendre à utiliser Ruby, Rails, JavaScript et React.
+        Actuellement en plein apprentissage en développement web grâce à The Hacking Project. 
+        J'ai appris à utiliser Ruby on Rails, JavaScript et React.
       </p>
 
       <section className="projects">
         <p>
-          Vous pourrez trouver ci-dessous la liste de mes projets. J'en ai réalisé certains 
+          Ici vous trouverez la liste de tous mes projets. J'en ai réalisé certains 
           lors de ma formation chez The Hacking Project, et d'autres sont des projets personnels.
         </p>
 
