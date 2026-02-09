@@ -26,7 +26,7 @@ div {
 }
 
 nav {
-  background-color: #222;
+  background-color: #eb0bd8;
   padding: 15px 40px;
 }
 
@@ -116,7 +116,7 @@ h2 {
 
 /* THEMES */
 .app.light {
-  background-color: #f4f4f4;
+  background-color: #f8bfec;
   color: #222;
 }
 
