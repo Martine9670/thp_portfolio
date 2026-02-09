@@ -44,9 +44,10 @@ export default function App() {
 
         {/* Logo GitHub */}
         <a
-          href="https://github.com/tonprofil"
+          href="https://github.com/Martine9670"
           target="_blank"
           rel="noopener noreferrer"
+          className="github-link"
         >
           <img
             src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
