@@ -1,4 +1,4 @@
-This is an exercise for # THE HACKING PROJECT
+This is an exercise for ### THE HACKING PROJECT
 
 ## 📂 Project Structure
 
